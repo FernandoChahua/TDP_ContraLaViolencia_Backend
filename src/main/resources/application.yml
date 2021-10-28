@@ -1,0 +1,55 @@
+
+server:
+    port: 8090
+    error:
+        include-message: always
+        include-binding-errors: always
+        
+        
+jwt:
+  clientId: tdp-rest-api
+  client-secret: secret
+  accessTokenValidititySeconds: 120
+  refreshTokenValiditySeconds: 1000
+spring:
+    datasource:
+        #AWS
+        password: P455w0rd#
+        url: jdbc:mysql://db-tdp.cbimphqd1rxb.us-east-1.rds.amazonaws.com:3306/db_tdp
+        username: root123
+        #
+        #password: MjSKTSRW
+        #url: jdbc:mysql://181.215.242.78:19952/db_tdp
+        #username: admin
+        #url: jdbc:mysql://localhost:3306/db_tdp
+        #username: root
+        #password: 
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+                dialect: org.hibernate.dialect.MySQL8Dialect
+        show-sql: true
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: superanonimo4321@gmail.com
+      password: P455w0rd#
+
+      properties:
+        mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+
+         
+  
